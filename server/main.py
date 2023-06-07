@@ -6,12 +6,12 @@ from fastapi.responses import PlainTextResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-# from routers import todos
+from routers import todos
 
 import config
 
 app = FastAPI()
-# app.include_router(todos.router)
+app.include_router(todos.router)
 
 
 origins = [
